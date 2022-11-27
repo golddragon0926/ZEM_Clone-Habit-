@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.zemhabitclonecoding.HabitDataViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WaitItemClickActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/wait_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/wait_back_btn"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/wait_item_click_icon_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/talk"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/wait_item_click_status_img"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:src="@drawable/registration"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/wait_item_click_icon_image" />
+
+            <TextView
+                android:id="@+id/wait_item_click_title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="긍정적인 언어 사용"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@id/wait_item_click_icon_image"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+            <TextView
+                android:id="@+id/wait_item_click_name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:text="습관 이름"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_title_txt"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/wait_item_click_name_write_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="소리지르지 않기"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_name_txt"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/wait_item_click_date_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기간"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/wait_item_click_name_write_txt"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/wait_item_click_date_startDate_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022.09.16"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_date_txt" />
+
+            <TextView
+                android:id="@+id/wait_item_click_date_write_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="~"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/wait_item_click_date_startDate_txt"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_date_txt" />
+
+            <TextView
+                android:id="@+id/wait_item_click_date_endDate_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022.10.15"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/wait_item_click_date_write_txt"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_date_txt" />
+
+            <TextView
+                android:id="@+id/wait_item_click_week_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="요일"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_date_startDate_txt" />
+
+            <TextView
+                android:id="@+id/wait_item_click_week_write_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매일"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_week_txt" />
+
+            <TextView
+                android:id="@+id/wait_item_click_week_revise_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="매일"
+                android:textColor="@color/purple_200"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/wait_item_click_week_write_txt"
+                app:layout_constraintTop_toTopOf="@+id/wait_item_click_week_write_txt" />
+
+            <TextView
+                android:id="@+id/wait_item_click_alarm_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="알림"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_week_write_txt" />
+
+            <TextView
+                android:id="@+id/wait_item_click_alarm_write_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="없음"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_alarm_txt" />
+
+            <TextView
+                android:id="@+id/wait_item_click_alarm_revise_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="없음"
+                android:textColor="@color/purple_200"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/wait_item_click_alarm_write_txt"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_alarm_txt" />
+
+            <TextView
+                android:id="@+id/wait_item_click_zemcon_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1회당 잼콘"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_alarm_write_txt" />
+
+            <ImageView
+                android:id="@+id/wait_item_click_zemcon_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zemcon"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wait_item_click_zemcon_txt"/>
+
+            <TextView
+                android:id="@+id/wait_item_click_zemcon_write_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@id/wait_item_click_zemcon_img"
+                app:layout_constraintTop_toTopOf="@+id/wait_item_click_zemcon_img"
+                app:layout_constraintBottom_toBottomOf="@id/wait_item_click_zemcon_img"/>
+
+            <TextView
+                android:id="@+id/wait_item_click_zemcon_revise_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="5"
+                android:textColor="@color/purple_200"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/wait_item_click_zemcon_img"
+                app:layout_constraintStart_toEndOf="@id/wait_item_click_zemcon_write_txt"
+                app:layout_constraintTop_toTopOf="@+id/wait_item_click_zemcon_img" />
+
+            <TextView
+                android:id="@+id/wait_item_click_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="빠짐없이 한다면, 30회 x 5잼콘 = 최대 150잼콘"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@id/wait_item_click_zemcon_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <Button
+                android:id="@+id/wait_item_click_cancel_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="요청 취소"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:background="@drawable/confirm_button_shape"
+                app:layout_constraintTop_toBottomOf="@id/wait_item_click_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <Button
+                android:id="@+id/wait_item_click_confirm_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="요청 확인"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/wait_item_click_cancel_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

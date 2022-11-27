@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/alert_white_border">
+
+    <TextView
+        android:id="@+id/week_title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="요일 선택"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/week_cardView"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/week_title_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/week_Monday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_habit_create_unselected"
+                android:gravity="center"
+                android:text="월"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/week_Tuesday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/week_Tuesday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_habit_create_unselected"
+                android:gravity="center"
+                android:text="화"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/week_Wednesday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/week_Monday" />
+
+            <TextView
+                android:id="@+id/week_Wednesday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_habit_create_unselected"
+                android:gravity="center"
+                android:text="수"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/week_Thursday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/week_Tuesday" />
+
+            <TextView
+                android:id="@+id/week_Thursday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_habit_create_unselected"
+                android:gravity="center"
+                android:text="목"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/week_Friday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/week_Wednesday" />
+
+            <TextView
+                android:id="@+id/week_Friday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_habit_create_unselected"
+                android:gravity="center"
+                android:text="금"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/week_Saturday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/week_Thursday" />
+
+            <TextView
+                android:id="@+id/week_Saturday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_habit_create_unselected"
+                android:gravity="center"
+                android:text="토"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/week_Sunday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/week_Friday" />
+
+            <TextView
+                android:id="@+id/week_Sunday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_habit_create_unselected"
+                android:gravity="center"
+                android:text="일"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/week_Saturday" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/week_all_btn"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/cancel_button_shape"
+        android:text="매일"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/week_cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/week_cancel"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="취소"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias="0"
+        android:background="@drawable/cancel_button_shape"
+        app:layout_constraintEnd_toStartOf="@+id/week_confirm"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/week_all_btn"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/week_confirm"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="확인"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias="0"
+        android:background="@drawable/confirm_button_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/week_cancel"
+        app:layout_constraintTop_toBottomOf="@id/week_all_btn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
